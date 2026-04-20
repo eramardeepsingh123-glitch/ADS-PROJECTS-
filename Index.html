@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADS PROJECTS</title>
+
+<style>
+body {margin:0;font-family:Arial;}
+
+/* TOP BAR */
+.top-bar {
+display:flex;
+align-items:center;
+background:#0d1b4c;
+color:white;
+padding:10px;
+}
+.top-bar img {width:50px;margin-right:10px;}
+.company-text h2 {margin:0;font-size:18px;}
+.company-text p {margin:0;font-size:12px;}
+.top-bar img {
+    width: 40px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: white;
+    padding: 3px;
+}
+
+/* NAV */
+nav {
+background:#1f3c88;
+padding:10px;
+text-align:center;
+}
+nav a {
+color:white;
+margin:10px;
+text-decoration:none;
+cursor:pointer;
+}
+
+/* PAGE */
+.page {display:none;padding:0px;text-align:center;}
+.active {display:block;}
+
+/* VIDEO */
+.video-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT ON VIDEO */
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+}
+
+.video-text h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.video-text p {
+    font-size: 14px;
+}
+
+/* HOME */
+.home-content {padding:20px;}
+
+/* GRID */
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* SLIDER */
+.slider {
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides {
+display:flex;
+transition:transform 0.5s ease-in-out;
+}
+
+.slides img {
+width:100%;
+flex-shrink:0;
+height:180px;
+object-fit:cover;
+}
+
+/* NAV BUTTONS */
+.prev, .next {
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:8px;
+cursor:pointer;
+}
+
+.prev {left:5px;}
+.next {right:5px;}
+
+/* FORM */
+input,textarea {
+width:80%;
+max-width:300px;
+padding:10px;
+margin:5px;
+}
+
+/* FOOTER */
+footer {
+background:#0d1b4c;
+color:white;
+padding:10px;
+text-align:center;
+margin-top:30px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+position:fixed;
+bottom:20px;
+right:20px;
+background:green;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<img src="logo.png" alt="ADS PROJECTS Logo">
+<div class="company-text">
+<h2>ADS PROJECTS</h2>
+<p>Building Trust, Strengthening Futures</p>
+</div>
+</div>
+
+<!-- NAV -->
+<nav>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('services')">Services</a>
+<a onclick="showPage('projects')">Projects</a>
+<a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+
+<div class="video-container">
+  <video autoplay muted loop>
+    <source src="1.mp4">
+</video>
+
+    <!-- TEXT INSIDE VIDEO -->
+    <div class="video-text">
+        <h1>ADS PROJECTS</h1>
+        <p>Building Trust, Strengthening Futures</p>
+    </div>
+</div>
+
+<div class="home-content">
+    <h2>About Us</h2>
+    <p>
+        We provide structural design, AutoCAD 2D/3D, and ductile detailing
+        with safe and economical engineering solutions.
+    </p>
+</div>
+
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="page">
+<h2>Our Services</h2>
+
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"><p>Structural Design</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581091215367-59ab6b4f5c8f"><p> 2D Floor plans and Elevation</p></div>
+<div class="card"><img src="2d-3d-copy.png"><p>3D Modelling</p></div>
+<div class="card"><img src="bim-services.jpg"><p>Building Information Modelling</p></div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="page">
+<h2>Our Projects</h2>
+
+<div class="grid">
+
+<!-- PROJECT 1 -->
+<div class="card">
+<h3>Residential Building</h3>
+
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+</div>
+
+<button class="prev">◀</button>
+<button class="next">▶</button>
+</div>
+<p><b>Location:</b> Chandigarh</p>
+<p><b>Work:</b> RCC structural design</p>
+<p><b>Details:</b> Multi-storey commercial project with safety design.</p>
+</div>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="card">
+<h3>Commercial Complex</h3>
+
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+<img src="https://images.unsplash.com/photo-1517586979036-b7d1e86b3345">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+</div>
+
+<button class="prev">◀</button>
+<button class="next">▶</button>
+</div>
+<p><b>Location:</b> Chandigarh</p>
+<p><b>Work:</b> RCC structural design</p>
+<p><b>Details:</b> Multi-storey commercial project with safety design.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <textarea id="message" placeholder="Message" required></textarea><br>
+    <button type="submit">Send</button>
+</form>
+
+</div>
+<!-- FOOTER -->
+<footer>
+📞 +91 905878717,9306376764 |      
+📧er.amardeepsingh123@email.com
+<footer>
+© 2026 ADS PROJECTS | Civil Engineering Consultancy
+
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919053878717" class="whatsapp">💬</a>
+
+<!-- SCRIPT -->
+<script>
+
+// PAGE SWITCH
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+// ✅ MANUAL SLIDER (EACH PROJECT INDEPENDENT)
+document.querySelectorAll(".slider").forEach(slider => {
+
+let slides = slider.querySelector(".slides");
+let images = slider.querySelectorAll("img");
+let index = 0;
+
+slider.querySelector(".next").addEventListener("click", () => {
+index = (index + 1) % images.length;
+slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+slider.querySelector(".prev").addEventListener("click", () => {
+index = (index - 1 + images.length) % images.length;
+slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+});
+
+
+</script>
+
+</body>
+</html>
